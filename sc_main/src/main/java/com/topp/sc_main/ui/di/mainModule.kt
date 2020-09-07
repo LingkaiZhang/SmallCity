@@ -1,5 +1,6 @@
 package com.topp.sc_main.ui.di
 
+import com.topp.sc_main.MainFragmentViewModel
 import com.topp.sc_main.ui.MainViewModel
 import com.topp.sc_main.ui.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -21,7 +22,7 @@ val treeRepoModule = module {
 val treeViewModelModule = module {
     viewModel { SplashViewModel() }
     viewModel { MainViewModel() }
-//    viewModel { HomeViewModel(get()) }
+    viewModel { MainFragmentViewModel() }
 //    viewModel { ProjectViewModel(get()) }
 //    viewModel { TabItemViewModel(get()) }
 //    viewModel { MineViewModel() }

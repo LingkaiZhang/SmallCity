@@ -20,6 +20,7 @@ ext {
             easypermissionsVersion: '3.0.0',
             rxjavaVersion         : '2.2.14',
             materialVersion       : '1.2.0-alpha05',
+            EasyNavigationVersion : '2.0.5',
     ]
 
     depsLibs = [
@@ -30,29 +31,29 @@ ext {
             extJunit             : 'androidx.test.ext:junit:1.1.0',
             espressoCore         : 'androidx.test.espresso:espresso-core:3.1.1',
 
-            appcompat      : 'androidx.appcompat:appcompat:1.0.2',
-            coreKtx        : 'androidx.core:core-ktx:1.0.2',
+            appcompat            : 'androidx.appcompat:appcompat:1.0.2',
+            coreKtx              : 'androidx.core:core-ktx:1.0.2',
 
             // Koin AndroidX Scope feature
-            koinScop       : "org.koin:koin-androidx-scope:${depsVersion.koinVersion}",
+            koinScop             : "org.koin:koin-androidx-scope:${depsVersion.koinVersion}",
 
             // Koin AndroidX ViewModel feature
-            KoinViewModel  : "org.koin:koin-androidx-viewmodel:${depsVersion.koinVersion}",
+            KoinViewModel        : "org.koin:koin-androidx-viewmodel:${depsVersion.koinVersion}",
 
             // Koin AndroidX Fragment Factory (unstable version)
-            koinFragmet    : "org.koin:koin-androidx-fragment:${depsVersion.koinVersion}",
+            koinFragmet          : "org.koin:koin-androidx-fragment:${depsVersion.koinVersion}",
 
-            kotlinReflect  : "org.jetbrains.kotlin:kotlin-reflect:${depsVersion.kotlinReflectVersion}",
+            kotlinReflect        : "org.jetbrains.kotlin:kotlin-reflect:${depsVersion.kotlinReflectVersion}",
 
-            easypermissions: "pub.devrel:easypermissions:${depsVersion.easypermissionsVersion}",
+            easypermissions      : "pub.devrel:easypermissions:${depsVersion.easypermissionsVersion}",
 
             //rxjava 已存在3.0版本
-            rxjava         : "io.reactivex.rxjava2:rxjava:${depsVersion.rxjavaVersion}",
+            rxjava               : "io.reactivex.rxjava2:rxjava:${depsVersion.rxjavaVersion}",
 
-            material       : "com.google.android.material:material:${depsVersion.materialVersion}",
+            material             : "com.google.android.material:material:${depsVersion.materialVersion}",
 
-
-
+            //2.0.5  AndroidX版本、支持ViewPager2
+            EasyNavigation       : "com.github.Vincent7Wong:EasyNavigation:${depsVersion.EasyNavigationVersion}",
 
 
     ]

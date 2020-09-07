@@ -56,6 +56,8 @@ dependencies {
 
     implementation rootProject.depsLibs.rxjava
 
+    implementation rootProject.depsLibs.EasyNavigation
+
 
     compileOnly project(path: ':lib_base')
 

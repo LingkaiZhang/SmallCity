@@ -39,7 +39,7 @@ class MainFragment : BaseFragment<MainFragmentViewModel, FragmentMainBinding>() 
         fragmentList.add(BFragment())
         fragmentList.add(CFragment())
         fragmentList.add(DFragment())
-        fragmentList.add(EFragment())
+        fragmentList.add(MineFragment())
 
         navigationBar.titleItems(tabText.toTypedArray())
             .normalIconItems(normalIcon.toIntArray())

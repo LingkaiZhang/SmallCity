@@ -2,6 +2,7 @@ package com.topp.sc_main.ui.di
 
 import com.topp.sc_main.MainFragmentViewModel
 import com.topp.sc_main.ui.MainViewModel
+import com.topp.sc_main.ui.normal.MineFragmentViewModel
 import com.topp.sc_main.ui.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -23,6 +24,7 @@ val treeViewModelModule = module {
     viewModel { SplashViewModel() }
     viewModel { MainViewModel() }
     viewModel { MainFragmentViewModel() }
+    viewModel { MineFragmentViewModel() }
 //    viewModel { ProjectViewModel(get()) }
 //    viewModel { TabItemViewModel(get()) }
 //    viewModel { MineViewModel() }

@@ -1,6 +1,8 @@
 package com.topp.smallcity
 
 import android.app.Application
+import com.alibaba.android.arouter.launcher.ARouter
+import com.tencent.mmkv.MMKV
 import com.topp.lib_base.utils.BaseContext
 import com.topp.smallcity.di.allModule
 import org.koin.android.ext.koin.androidContext
@@ -20,6 +22,9 @@ class App : Application() {
         super.onCreate()
 
         BaseContext.instance.init(this)
+        //初始化阿里路由
+        ARouter.init(this)
+        MMKV.initialize(this)
 
         startKoin {
             androidContext(this@App)

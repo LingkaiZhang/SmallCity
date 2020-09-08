@@ -21,6 +21,9 @@ ext {
             rxjavaVersion         : '2.2.14',
             materialVersion       : '1.2.0-alpha05',
             EasyNavigationVersion : '2.0.5',
+            arouterApiVersion     : '1.5.0',
+            arouterCompilerVersion: '1.2.2',
+            mmkvVersion           : '1.1.1',
     ]
 
     depsLibs = [
@@ -54,6 +57,14 @@ ext {
 
             //2.0.5  AndroidX版本、支持ViewPager2
             EasyNavigation       : "com.github.Vincent7Wong:EasyNavigation:${depsVersion.EasyNavigationVersion}",
+
+            //arouter
+            aroutreApi           : "com.alibaba:arouter-api:${depsVersion.arouterApiVersion}",
+
+            arouterCompiler      : "com.alibaba:arouter-compiler:${depsVersion.arouterCompilerVersion}",
+
+            //数据存储
+            mmkv                 : "com.tencent:mmkv-static:${depsVersion.mmkvVersion}",
 
 
     ]

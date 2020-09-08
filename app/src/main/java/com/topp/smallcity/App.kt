@@ -1,7 +1,9 @@
 package com.topp.smallcity
 
 import android.app.Application
+import androidx.core.content.ContextCompat
 import com.alibaba.android.arouter.launcher.ARouter
+import com.next.easytitlebar.view.EasyTitleBar
 import com.tencent.mmkv.MMKV
 import com.topp.lib_base.utils.BaseContext
 import com.topp.smallcity.di.allModule
@@ -30,5 +32,15 @@ class App : Application() {
             androidContext(this@App)
             modules(allModule)
         }
+
+        initEasyTitleBar()
+    }
+
+    private fun initEasyTitleBar() {
+        EasyTitleBar.init()
+            .backgroud(ContextCompat.getColor(this, R.color.white))
+            .titleSize(18)
+            .titleColor(ContextCompat.getColor(this, R.color.common_text))
+            .titleBarHeight(52)
     }
 }

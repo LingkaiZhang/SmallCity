@@ -66,6 +66,10 @@ dependencies {
 
     implementation rootProject.depsLibs.mmkv
 
+    implementation rootProject.depsLibs.EasyTitleBar
+
+
+
     implementation project(path: ':lib_base')
     implementation project(path: ':sc_main')
     implementation project(path: ':sc_login')

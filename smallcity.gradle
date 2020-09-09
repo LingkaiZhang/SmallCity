@@ -25,6 +25,7 @@ ext {
             arouterApiVersion     : '1.5.0',
             arouterCompilerVersion: '1.2.2',
             mmkvVersion           : '1.1.1',
+            superfamilyVersion    : '2.2.0',
     ]
 
     depsLibs = [
@@ -59,7 +60,7 @@ ext {
             //2.0.5  AndroidX版本、支持ViewPager2
             EasyNavigation       : "com.github.Vincent7Wong:EasyNavigation:${depsVersion.EasyNavigationVersion}",
 
-            EasyTitleBar       : "com.github.forvv231:EasyTitleBar:${depsVersion.EasyTitleBarVersion}",
+            EasyTitleBar         : "com.github.forvv231:EasyTitleBar:${depsVersion.EasyTitleBarVersion}",
 
             //arouter
             aroutreApi           : "com.alibaba:arouter-api:${depsVersion.arouterApiVersion}",
@@ -68,6 +69,9 @@ ext {
 
             //数据存储
             mmkv                 : "com.tencent:mmkv-static:${depsVersion.mmkvVersion}",
+
+            //超级按钮
+            superfamily          : "top.androidman:superfamily:${depsVersion.superfamilyVersion}",
 
 
     ]

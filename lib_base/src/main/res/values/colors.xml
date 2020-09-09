@@ -26,5 +26,6 @@
 
     <color name="orange">#ea9518</color>
     <color name="seek_end">#D5D4D4</color>
+    <color name="common_text">#333333</color>
 
 </resources>

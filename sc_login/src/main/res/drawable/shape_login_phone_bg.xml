@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 填充 -->
+    <solid android:color="@color/main_tab_bg" />
+
+    <!-- 边框颜色 宽度 -->
+    <!--    <stroke android:width="0.5dp" android:color="@color/blue_right_word"/>-->
+
+    <corners
+        android:radius="2dp"
+        />
+
+
+</shape>

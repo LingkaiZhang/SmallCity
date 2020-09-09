@@ -7,4 +7,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="phoneEditText">
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">11</item>
+        <item name="android:digits">1234567890</item>
+    </style>
+
+    <style name="messageEditText">
+        <item name="android:digits">1234567890</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">6</item>
+    </style>
+
 </resources>

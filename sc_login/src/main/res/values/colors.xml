@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="main_tab_bg">#f7f7f7</color>
+    <color name="unline_color">#e5e5e5</color>
+    <color name="color_999999">#999999</color>
+    <color name="btn_color_black">#333333</color>
 </resources>

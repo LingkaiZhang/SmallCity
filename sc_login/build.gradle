@@ -57,6 +57,7 @@ dependencies {
 
     compileOnly rootProject.depsLibs.EasyTitleBar
 
+    compileOnly rootProject.depsLibs.superfamily
 
     compileOnly project(path: ':lib_base')
 

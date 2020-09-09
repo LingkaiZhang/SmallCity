@@ -68,6 +68,7 @@ dependencies {
 
     implementation rootProject.depsLibs.EasyTitleBar
 
+    implementation rootProject.depsLibs.superfamily
 
 
     implementation project(path: ':lib_base')

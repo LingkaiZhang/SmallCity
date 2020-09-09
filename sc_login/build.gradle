@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':lib_net')
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     compileOnly rootProject.depsLibs.appcompat
@@ -58,6 +59,10 @@ dependencies {
     compileOnly rootProject.depsLibs.EasyTitleBar
 
     compileOnly rootProject.depsLibs.superfamily
+
+    compileOnly rootProject.depsLibs.lifecycleViewmodelKtx
+
+    compileOnly rootProject.depsLibs.retrofit
 
     compileOnly project(path: ':lib_base')
 

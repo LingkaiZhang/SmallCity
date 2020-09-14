@@ -1,3 +1,4 @@
+include ':sc_webview'
 include ':lib_net'
 include ':sc_login'
 include ':lib_base'

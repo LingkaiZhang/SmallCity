@@ -84,6 +84,7 @@ dependencies {
 
     implementation project(path: ':sc_main')
     implementation project(path: ':sc_login')
+    implementation project(path: ':sc_webview')
 
 
 }

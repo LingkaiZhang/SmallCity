@@ -1,6 +1,7 @@
 package com.topp.sc_login.ui
 
 
+import android.widget.Toast
 import com.topp.lib_base.base.BaseActivity
 import com.topp.lib_base.utils.DeviceIdUtil
 import com.win.ft_login.R
@@ -26,7 +27,14 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
         //验证码
         countDownTextView.setOnClickListener {
             val phoneNo = etPhone.text.toString().trim()
-            mViewModel.sendSmsVerification(phoneNo, DeviceIdUtil.getDeviceId(this))
+            if (phoneNo.isNotEmpty() && phoneNo.length == 11) {
+                mViewModel.sendSmsVerification(phoneNo, DeviceIdUtil.getDeviceId(this))
+            } else {
+                Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show()
+                etPhone.requestFocus()
+                countDownTextView.reset()
+            }
+
         }
     }
 

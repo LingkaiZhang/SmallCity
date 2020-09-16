@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.topp.sc_main.ui.navigation;
+package com.meosun.sc_main.ui.navigation;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -39,7 +39,7 @@ import androidx.navigation.Navigator;
 import androidx.navigation.fragment.DialogFragmentNavigator;
 import androidx.navigation.fragment.FragmentNavigator;
 
-import com.topp.sc_main.R;
+import com.meosun.sc_main.R;
 
 
 /**

@@ -1,5 +1,5 @@
 package com.topp.lib_net.net
-import com.topp.lib_base.BuildConfig
+import com.meosun.lib_net.BuildConfig
 import com.win.lib_net.interceptor.CommonInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

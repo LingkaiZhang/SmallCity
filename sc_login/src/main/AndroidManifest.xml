@@ -2,12 +2,12 @@
 
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.win.ft_login">
+    package="com.meosun.sc_login">
 
     <application>
 
         <activity
-            android:name="com.topp.sc_login.ui.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="登录">
             <!--            <intent-filter>-->
             <!--                <action android:name="android.intent.action.MAIN" />-->

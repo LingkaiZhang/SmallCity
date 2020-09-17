@@ -19,4 +19,16 @@
         <item name="android:maxLength">6</item>
     </style>
 
+    <!-- 圆角图片 -->
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">25dp</item>
+    </style>
+
+    <!-- 圆形图片 -->
+    <style name="circleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>

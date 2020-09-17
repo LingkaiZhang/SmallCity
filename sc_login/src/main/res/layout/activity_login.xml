@@ -20,14 +20,27 @@
             android:id="@+id/titleBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:Easy_lineState="gone"
             app:layout_constraintTop_toTopOf="parent"
             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivAppLogo"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:strokeColor="@color/color_999999"
+            android:layout_marginTop="80dp"
+            android:src="@mipmap/ic_launcher"
+            app:shapeAppearanceOverlay="@style/circleImageStyle"
+            app:layout_constraintTop_toBottomOf="@id/titleBar"/>
 
         <View
             android:id="@+id/empty"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintTop_toBottomOf="@id/titleBar"/>
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/sivAppLogo"/>
 
         <LinearLayout
             android:layout_width="match_parent"

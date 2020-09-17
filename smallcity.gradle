@@ -33,6 +33,7 @@ ext {
             arouterCompilerVersion      : '1.2.2',
             mmkvVersion                 : '1.1.1',
             superfamilyVersion          : '2.2.0',
+            materialVersion             : '1.2.0',
     ]
 
     depsLibs = [
@@ -47,6 +48,7 @@ ext {
 
             appcompat            : 'androidx.appcompat:appcompat:1.0.2',
             coreKtx              : 'androidx.core:core-ktx:1.0.2',
+
 
             //网络请求
             retrofit             : "com.squareup.retrofit2:retrofit:${depsVersion.retrofitVersion}",
@@ -93,6 +95,9 @@ ext {
 
             //超级按钮
             superfamily          : "top.androidman:superfamily:${depsVersion.superfamilyVersion}",
+
+            //Material 组件
+            material             : "com.google.android.material:material:${depsVersion.materialVersion}",
 
 
     ]

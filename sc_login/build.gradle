@@ -60,6 +60,8 @@ dependencies {
 
     compileOnly rootProject.depsLibs.superfamily
 
+    compileOnly rootProject.depsLibs.material
+
     compileOnly rootProject.depsLibs.lifecycleViewmodelKtx
 
     compileOnly rootProject.depsLibs.retrofit

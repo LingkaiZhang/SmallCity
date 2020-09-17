@@ -70,6 +70,8 @@ dependencies {
 
     implementation rootProject.depsLibs.superfamily
 
+    implementation rootProject.depsLibs.material
+
     implementation rootProject.depsLibs.retrofit
     implementation rootProject.depsLibs.converterGson
     implementation rootProject.depsLibs.gson

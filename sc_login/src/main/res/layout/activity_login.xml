@@ -26,21 +26,57 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivAppLogo"
-            android:layout_width="104dp"
-            android:layout_height="104dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:strokeColor="@color/color_999999"
             android:layout_marginTop="80dp"
             android:src="@mipmap/ic_launcher"
-            app:shapeAppearanceOverlay="@style/circleImageStyle"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"
             app:layout_constraintTop_toBottomOf="@id/titleBar"/>
+        
+        <LinearLayout
+            android:id="@+id/ll_login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/sivAppLogo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pingfang_bold"/>
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#DBDBDB"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:textSize="20sp"
+                android:textColor="#949494"
+                android:fontFamily="@font/pingfang_bold"/>
+            
+        </LinearLayout>
 
         <View
             android:id="@+id/empty"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toBottomOf="@id/sivAppLogo"/>
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_login_register"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,6 +102,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="+86"
                 android:textColor="@color/common_text_3"
+                android:fontFamily="@font/pingfang_heavy"
                 android:textSize="15sp" />
 
             <View
@@ -127,6 +164,7 @@
                 android:layout_marginEnd="15dp"
                 android:gravity="center"
                 android:text="@string/get_verification_code"
+                android:fontFamily="@font/pingfang_medium"
                 android:textColor="@color/common_text_3"
                 android:textSize="12sp" />
 

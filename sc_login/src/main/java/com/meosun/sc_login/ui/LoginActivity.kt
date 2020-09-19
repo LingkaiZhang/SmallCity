@@ -1,16 +1,70 @@
 package com.meosun.sc_login.ui
 
 
+import android.util.Log
 import android.widget.Toast
 import com.meosun.sc_login.databinding.ActivityLoginBinding
 
 import com.meosun.lib_base.base.BaseActivity
 import com.meosun.lib_base.utils.DeviceIdUtil
 import com.meosun.sc_login.R
+import com.umeng.socialize.UMAuthListener
+import com.umeng.socialize.UMShareAPI
+import com.umeng.socialize.bean.SHARE_MEDIA
 import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
+
+    /**
+     * 第三方登录回调
+     */
+    internal var authListener: UMAuthListener = object : UMAuthListener {
+
+        /**
+         * 开始登录的回调
+         * @param platform 第三方登录的平台名称
+         */
+        override fun onStart(platform: SHARE_MEDIA) {
+            Log.d("ShareSDK","登录的第三方平台是:" + platform)
+        }
+
+        /**
+         * 登录成功回调
+         * @param platform
+         * @param action
+         * @param map
+         */
+        override fun onComplete(platform: SHARE_MEDIA, action: Int, map: Map<String, String>) {
+            //  遍历map集合，取出QQ登录后回调给我们的信息
+            for (key in map.keys) {
+                Log.d("ShareSDK","key值是：" + key + "  对应的具体值:" + map[key] + "\n")
+            //将取出的QQ账户信息存储到SharedPreferences中
+
+            }
+            Log.d("ShareSDK","登录")
+        }
+
+        /**
+         * 失败
+         * @param platform
+         * @param action
+         * @param t
+         */
+        override fun onError(platform: SHARE_MEDIA, action: Int, t: Throwable) {
+            Log.d("ShareSDK","登录失败" + t.message)
+        }
+
+        /**
+         * 取消登录的回调
+         * @param platform
+         * @param action
+         */
+        override fun onCancel(platform: SHARE_MEDIA, action: Int) {
+            Log.d("ShareSDK","取消登录")
+        }
+    }
+
 
     override fun initData() {
 
@@ -31,7 +85,9 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
                 etPhone.requestFocus()
                 countDownTextView.reset()
             }
-
+        }
+        ivWeChat.setOnClickListener {
+            UMShareAPI.get(this).getPlatformInfo(this, SHARE_MEDIA.WEIXIN, authListener)
         }
     }
 

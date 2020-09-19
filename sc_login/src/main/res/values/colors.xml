@@ -7,4 +7,7 @@
     <color name="unline_color">#e5e5e5</color>
     <color name="color_999999">#999999</color>
     <color name="btn_color_black">#333333</color>
+    <color name="btn_end_color">#3DCB8D</color>
+    <color name="btn_start_color">#09B996</color>
+    <color name="line_gray_e9">#E9E9E9</color>
 </resources>

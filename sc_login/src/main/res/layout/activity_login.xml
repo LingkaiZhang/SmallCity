@@ -164,6 +164,7 @@
                 android:layout_marginEnd="15dp"
                 android:gravity="center"
                 android:text="@string/get_verification_code"
+                android:background="@drawable/shape_btn_bg_circular_ing"
                 android:fontFamily="@font/pingfang_medium"
                 android:textColor="@color/common_text_3"
                 android:textSize="12sp" />

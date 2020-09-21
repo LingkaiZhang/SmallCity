@@ -8,6 +8,7 @@ import com.meosun.sc_login.databinding.ActivityLoginBinding
 import com.meosun.lib_base.base.BaseActivity
 import com.meosun.lib_base.utils.DeviceIdUtil
 import com.meosun.sc_login.R
+import com.meosun.sc_login.model.LoginLayoutBean
 import com.umeng.socialize.UMAuthListener
 import com.umeng.socialize.UMShareAPI
 import com.umeng.socialize.bean.SHARE_MEDIA
@@ -65,9 +66,11 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
         }
     }
 
+    private lateinit var mData: LoginLayoutBean
 
     override fun initData() {
-
+        mData = LoginLayoutBean()
+        mViewBinding.bean = mData
     }
 
     override fun initView() {
@@ -89,6 +92,19 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
         ivWeChat.setOnClickListener {
             UMShareAPI.get(this).getPlatformInfo(this, SHARE_MEDIA.WEIXIN, authListener)
         }
+
+        //切换登录注册
+        mViewBinding.btnLoginTips.setOnClickListener {
+            mData.isLogin = true
+            mViewBinding.btnLoginTips.setTextColor(resources.getColor(R.color.black))
+            mViewBinding.btnRegisterTips.setTextColor(resources.getColor(R.color.text_gray_46))
+        }
+        mViewBinding.btnRegisterTips.setOnClickListener {
+            mData.isLogin = false
+            mViewBinding.btnRegisterTips.setTextColor(resources.getColor(R.color.black))
+            mViewBinding.btnLoginTips.setTextColor(resources.getColor(R.color.text_gray_46))
+        }
+
     }
 
     override fun getLayoutResId(): Int {

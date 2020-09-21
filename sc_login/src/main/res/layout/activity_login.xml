@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <variable
+            name="bean"
+            type="com.meosun.sc_login.model.LoginLayoutBean" />
+
+        <import type="android.view.View" />
 
     </data>
 
@@ -12,82 +17,84 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:background="@color/white"
+        android:fitsSystemWindows="true"
         tools:context=".ui.LoginActivity">
 
         <com.next.easytitlebar.view.EasyTitleBar
             android:id="@+id/titleBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             app:Easy_lineState="gone"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivAppLogo"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:strokeColor="@color/color_999999"
             android:layout_marginTop="80dp"
             android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar"
             app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"
-            app:layout_constraintTop_toBottomOf="@id/titleBar"/>
-        
+            app:strokeColor="@color/color_999999" />
+
         <LinearLayout
             android:id="@+id/ll_login_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/sivAppLogo"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="30dp">
-            
+            app:layout_constraintTop_toBottomOf="@id/sivAppLogo">
+
             <TextView
+                android:id="@+id/btnLoginTips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfang_bold"
                 android:text="登录"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/pingfang_bold"/>
-            
+                android:textSize="20sp" />
+
             <View
                 android:layout_width="1dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:background="#DBDBDB"/>
+                android:background="#DBDBDB" />
 
             <TextView
+                android:id="@+id/btnRegisterTips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfang_bold"
                 android:text="注册"
-                android:textSize="20sp"
-                android:textColor="#949494"
-                android:fontFamily="@font/pingfang_bold"/>
-            
+                android:textColor="@color/text_gray_46"
+                android:textSize="20sp" />
+
         </LinearLayout>
 
         <View
             android:id="@+id/empty"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            app:layout_constraintTop_toBottomOf="@id/ll_login_register"/>
+            app:layout_constraintTop_toBottomOf="@id/ll_login_register" />
 
         <LinearLayout
+            android:id="@+id/ll_phone_input"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:id="@+id/ll_phone_input"
             android:layout_marginLeft="@dimen/login_left_margin"
             android:layout_marginRight="@dimen/login_left_margin"
             android:background="@drawable/shape_login_phone_bg"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/empty"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/empty">
 
 
             <ImageView
@@ -100,9 +107,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:fontFamily="@font/pingfang_heavy"
                 android:text="+86"
                 android:textColor="@color/common_text_3"
-                android:fontFamily="@font/pingfang_heavy"
                 android:textSize="15sp" />
 
             <View
@@ -117,14 +124,14 @@
                 style="@style/phoneEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
                 android:cursorVisible="true"
                 android:hint="@string/input_phone_number"
-                android:textColorHint="@color/color_999999"
                 android:textColor="@color/common_text_3"
+                android:textColorHint="@color/color_999999"
                 android:textCursorDrawable="@drawable/shape_et_cursor_color"
                 android:textSize="15sp" />
 
@@ -136,10 +143,10 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginLeft="@dimen/login_left_margin"
-            android:layout_marginRight="@dimen/login_left_margin"
             android:layout_marginTop="18dp"
-            app:layout_constraintTop_toBottomOf="@id/ll_phone_input"
-            android:background="@drawable/shape_login_phone_bg">
+            android:layout_marginRight="@dimen/login_left_margin"
+            android:background="@drawable/shape_login_phone_bg"
+            app:layout_constraintTop_toBottomOf="@id/ll_phone_input">
 
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -162,72 +169,93 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="15dp"
-                android:gravity="center"
-                android:text="@string/get_verification_code"
                 android:background="@drawable/shape_btn_bg_circular_ing"
                 android:fontFamily="@font/pingfang_medium"
+                android:gravity="center"
+                android:text="@string/get_verification_code"
                 android:textColor="@color/common_text_3"
                 android:textSize="12sp" />
 
         </RelativeLayout>
 
+        <com.meosun.lib_base.view.PasswordEditText
+            android:id="@+id/edtPassword"
+            style="@style/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="@dimen/login_left_margin"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="@dimen/login_left_margin"
+            android:background="@drawable/shape_login_phone_bg"
+            android:cursorVisible="true"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/common_text_3"
+            android:textColorHint="@color/color_999999"
+            android:textCursorDrawable="@drawable/shape_et_cursor_color"
+            android:textSize="15sp"
+            android:visibility="@{bean.login? View.GONE : View.VISIBLE}"
+            app:layout_constraintTop_toBottomOf="@id/rl_sms_verCode" />
+
         <top.androidman.SuperButton
-            android:id="@+id/btn_login"
-            app:layout_constraintTop_toBottomOf="@id/rl_sms_verCode"
+            android:id="@+id/btnNextStep"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="40dp"
             android:layout_marginLeft="@dimen/login_left_margin"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="@dimen/login_left_margin"
-            app:corner="127dp"
+            app:color_direction="LEFT_RIGHT"
             app:color_end="@color/btn_end_color"
             app:color_start="@color/btn_start_color"
-            app:color_direction="LEFT_RIGHT"
-            app:text="@string/immediately_login"
+            app:corner="127dp"
+            app:layout_constraintTop_toBottomOf="@id/edtPassword"
+            app:text="@{bean.tips}"
             app:textColor="@color/white"
-            app:textSize="17sp"/>
+            app:textSize="17sp" />
 
         <TextView
             android:id="@+id/tvPasswordLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="密码登录"
-            android:textSize="13sp"
-            android:textColor="#565656"
-            app:layout_constraintTop_toBottomOf="@id/btn_login"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/pingfang_medium"
+            android:text="密码登录"
+            android:textColor="#565656"
+            android:textSize="13sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:fontFamily="@font/pingfang_medium"/>
+            app:layout_constraintTop_toBottomOf="@id/btnNextStep" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPasswordLogin"
-            android:layout_marginTop="45dp"
+            android:layout_marginBottom="100dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
-            
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
             <View
                 android:layout_width="104dp"
                 android:layout_height="1dp"
-                android:background="#E9E9E9"/>
+                android:background="#E9E9E9" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
                 android:text="第三方登录"
                 android:textColor="#C6C6C6"
-                android:textSize="13sp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"/>
+                android:textSize="13sp" />
 
             <View
                 android:layout_width="104dp"
                 android:layout_height="1dp"
-                android:background="@color/line_gray_e9"/>
+                android:background="@color/line_gray_e9" />
 
         </LinearLayout>
 
@@ -235,11 +263,11 @@
             android:id="@+id/ivWeChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:src="@mipmap/wechat_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPasswordLogin"
-            android:layout_marginTop="100dp"/>
+            app:layout_constraintRight_toRightOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,6 +13,11 @@
         <item name="android:digits">1234567890</item>
     </style>
 
+    <style name="passwordEditText">
+        <item name="android:inputType">textWebPassword</item>
+        <item name="android:maxLength">16</item>
+    </style>
+
     <style name="messageEditText">
         <item name="android:digits">1234567890</item>
         <item name="android:inputType">number</item>
@@ -22,7 +27,7 @@
     <!-- 圆角图片 -->
     <style name="roundedCornerImageStyle">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">25dp</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
     <!-- 圆形图片 -->

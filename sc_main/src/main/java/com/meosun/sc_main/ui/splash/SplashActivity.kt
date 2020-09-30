@@ -19,8 +19,12 @@ class SplashActivity : BaseActivity<SplashViewModel, ActivitySplashBinding>(),
 
 
     private var disposable: Disposable? = null
-    private val tips = "玩安卓现在要向您申请存储权限，用于访问您的本地音乐，您也可以在设置中手动开启或者取消。"
-    private val perms = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    private val tips = "玩安卓现在要向您申请权限，用于更好的使用体验，您也可以在设置中手动开启或者取消。"
+    private  val perms = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION,
+        Manifest.permission.READ_LOGS, Manifest.permission.READ_PHONE_STATE,
+        Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.SET_DEBUG_APP,
+        Manifest.permission.RECEIVE_SMS, Manifest.permission.SYSTEM_ALERT_WINDOW,Manifest.permission.CAMERA,
+        Manifest.permission.WRITE_APN_SETTINGS,Manifest.permission.RECORD_AUDIO)
 
 
     companion object {
@@ -56,7 +60,6 @@ class SplashActivity : BaseActivity<SplashViewModel, ActivitySplashBinding>(),
 
     @AfterPermissionGranted(WRITE_EXTERNAL_STORAGE)
     private fun RequestLocationAndCallPermission() {
-        val perms = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
         //数组中权限都已申请
         if (EasyPermissions.hasPermissions(this, *perms)) {
             startIntent()

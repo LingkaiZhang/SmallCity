@@ -3,6 +3,7 @@ package com.meosun.sc_login.ui
 
 import android.util.Log
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.meosun.sc_login.databinding.ActivityLoginBinding
 
 import com.meosun.lib_base.base.BaseActivity
@@ -96,13 +97,22 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
         //切换登录注册
         mViewBinding.btnLoginTips.setOnClickListener {
             mData.isLogin = true
-            mViewBinding.btnLoginTips.setTextColor(resources.getColor(R.color.black))
-            mViewBinding.btnRegisterTips.setTextColor(resources.getColor(R.color.text_gray_46))
+            mViewBinding.btnLoginTips.setTextColor(ContextCompat.getColor(this,R.color.black))
+            mViewBinding.btnRegisterTips.setTextColor(ContextCompat.getColor(this,R.color.text_gray_46))
         }
         mViewBinding.btnRegisterTips.setOnClickListener {
             mData.isLogin = false
-            mViewBinding.btnRegisterTips.setTextColor(resources.getColor(R.color.black))
-            mViewBinding.btnLoginTips.setTextColor(resources.getColor(R.color.text_gray_46))
+            mViewBinding.btnRegisterTips.setTextColor(ContextCompat.getColor(this,R.color.black))
+            mViewBinding.btnLoginTips.setTextColor(ContextCompat.getColor(this,R.color.text_gray_46))
+        }
+
+        //登录或注册
+        mViewBinding.btnNextStep.setOnClickListener {
+            if (mData.isLogin){
+
+            } else {
+
+            }
         }
 
     }

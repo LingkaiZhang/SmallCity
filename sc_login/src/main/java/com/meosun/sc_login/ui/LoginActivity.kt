@@ -21,14 +21,14 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
     /**
      * 第三方登录回调
      */
-    internal var authListener: UMAuthListener = object : UMAuthListener {
+    private var authListener: UMAuthListener = object : UMAuthListener {
 
         /**
          * 开始登录的回调
          * @param platform 第三方登录的平台名称
          */
         override fun onStart(platform: SHARE_MEDIA) {
-            Log.d("ShareSDK","登录的第三方平台是:" + platform)
+            Log.d("ShareSDK", "登录的第三方平台是:$platform")
         }
 
         /**
